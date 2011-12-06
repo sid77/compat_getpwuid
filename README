@@ -1,0 +1,11 @@
+compat_getpwuid
+
+Linux-based getpwuid port from uClibc-0.9.32. This library is useful when you
+have to build a static binary from source code which will call glibc's
+getpwuid and you don't want to bring the glibc runtime with you or to build a
+whole new toolchain based on uClibc.
+
+I copied the needed bits straight from uClibc, stripped out the extra
+functions and glued them together with some hacks.
+
+Works for me but YMMV ;-)
